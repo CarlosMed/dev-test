@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Carlos Medina | Landing Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <a href="#footer__logo"><div id="header__logo" class="header__logo"></div></a>
+      <div class="header-wrapper">
+        <div class="header__portrait"></div>
+        <p class="name">{{name}}</p>
+        <a :href="sub_jump">
+    <button v-on:click='scroll' class="btn header__btn header__btn--hover">sign up today</button>
+   </a>
+      </div>
+      <div class="header__menu"></div>
+    </div>
+  </header>
+  <div id="body">
+    <div class="body__row">
+      <div class="center body__row__video" />
+      <div class="video__play"></div>
+      <p class="video__info">Play Video</p>
+    </div>
+    <div class="row__desc__wrapper">
+      <p class="center row__desc">12 Handy Tips For Generating Leads Through Cold Calling</p>
+      <div class="line row__desc__line"></div>
+    </div>
+  </div>
+  <div class="center body__row">
+    <p class="body__row__desc body_desc1">{{body_desc1}}</p>
+    <p class="body__row__desc body_desc2">{{body_desc2}}</p>
+  </div>
+  </div>
+  <div id="sign-up" class="body__row">
+    <p class="center sign-up__desc">Sometimes you need to receive these things in your inbox for free!</p>
+    <div id="signup__input" class="sign-up__input">
+      <form class="center input__form" action="#">
+        <div class="form__container">
+          <label class="form__label" for="email">Sign up to receive the latest updates</label>
+          <div class="line form__line"></div>
+          <div class="form__signup">
+            <input id="email" class="form__email" type="email" placeholder="Email address" required/>
+            <button class="btn form__submit" type="submit" />Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="footer__upper">
+      <a href="#header__logo" id="footer__logo"><img src="./assets/footer-logo.svg" alt="Logo" class="footer__logo" /></a>
+      <div class="footer__crumb footer__signup">
+        <p class="footer__crumb__title signup__title">Sign up</p>
+        <a class="footer__crumb__link signup__links" href="#">To recieve the latest updates</a>
+      </div>
+      <div class="footer__crumb footer__process">
+        <p class="footer__crumb__title process__title">Our Process</p>
+        <a class="footer__crumb__link process__links" href="#">Answers to your questions</a>
+      </div>
+      <div class="footer__crumb footer__Gallery">
+        <p class="footer__crumb__title Gallery__title">Gallery</p>
+        <a class="footer__crumb__link Gallery__links" href="#">View photos and videos</a>
+      </div>
+    </div>
+    <p class="center footer__desc">{{footer_desc}}
+      <p>
+  </footer>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
