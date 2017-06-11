@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Carlos Medina | Landing Page</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue"></script>
@@ -11,15 +14,17 @@
 <body>
   <header>
     <div id="header">
-      <a href="#footer__logo"><div id="header__logo" class="header__logo"></div></a>
+      <a href="#footer__logo">
+        <div id="header__logo" class="header__logo"></div>
+      </a>
       <div class="header-wrapper">
         <div class="header__portrait"></div>
         <p class="name">{{name}}</p>
         <a :href="sub_jump">
-    <button v-on:click='scroll' class="btn header__btn header__btn--hover">sign up today</button>
-   </a>
+        <button v-on:click='scroll' class="btn header__btn header__btn--hover">sign up today</button></a>
       </div>
-      <div class="header__menu"></div>
+      <div class="header__menu">
+      </div>
     </div>
   </header>
   <div id="body">
