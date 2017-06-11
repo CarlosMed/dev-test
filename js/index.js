@@ -24,7 +24,7 @@ var methods = {
 	}
 };
 
-var setter = function (entry) {
+var Init = function (entry) {
 
 	var info = {
 		name: entry.fields.data.name,
@@ -59,4 +59,4 @@ var setter = function (entry) {
 }
 
 client.getEntry('4LML0PW0FqioGqEYgOO6AQ')
-	.then(setter);
+	.then(Init);
