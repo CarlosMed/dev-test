@@ -9,6 +9,7 @@
   <title>Carlos Medina | Landing Page</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/contentful@latest/dist/contentful.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <div class="header__portrait"></div>
         <p class="name">{{name}}</p>
         <a :href="sub_jump">
-        <button v-on:click='scroll' class="btn header__btn header__btn--hover">sign up today</button></a>
+        <button class="btn header__btn header__btn--hover">sign up today</button></a>
       </div>
       <div class="header__menu">
       </div>
@@ -51,8 +52,8 @@
           <label class="form__label" for="email">Sign up to receive the latest updates</label>
           <div class="line form__line"></div>
           <div class="form__signup">
-            <input id="email" class="form__email" type="email" placeholder="Email address" required/>
-            <button class="btn form__submit" type="submit" />Sign up</button>
+            <input @keyup="getEmail" id="email" v-bind:class="{form__email:true, form__emailValid: formValid, form__emailInvalid: formInvalid}" type="email" placeholder="Email address" required/>
+            <button v-on:click.prevent="submitted" class="btn form__submit" type="submit" />Sign up</button>
           </div>
         </div>
       </form>
