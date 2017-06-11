@@ -99,7 +99,7 @@
 	width: 30px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	border: 2px var(--secondary) solid;
 }
 
@@ -313,5 +313,14 @@
 	}
 	.form__label {
 		text-align: left;
+	}
+}
+
+@media screen and (max-width: 451px) {
+	.form__container {
+		text-align: center;
+	}
+	.form__line {
+		margin: 20px auto;
 	}
 }
